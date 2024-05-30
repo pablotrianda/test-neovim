@@ -3,7 +3,8 @@
 Run the golang tests using [vim-go](https://github.com/fatih/vim-go) commands
 
 
-![img](https://i.imgur.com/k3MoAAM.png)
+![img](https://i.imgur.com/6sGNCU6.png)
+
 
 ## 📦 Installation
 
@@ -32,4 +33,5 @@ Show the following options:
 * `GoTestFunc`
 * `GoFuncFile`
 * `GoTestCompile`
-* `GoCoverage`
+* `GoCoverage (Diff)`
+* `go test ./... -coverprofile=cover.out && go tool cover -html=cover.out` (Open in browser)
