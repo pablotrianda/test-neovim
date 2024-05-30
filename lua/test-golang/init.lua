@@ -2,8 +2,8 @@ local hydra = require "hydra"
 
 local hint = [[
    _f_: Test File     _x_: Compile test
-   _c_: Current Test  _t_: Test Coverage report  
-  
+   _c_: Current Test  _t_: Test Coverage report (diff) 
+   _o_: Open coverage report 
  ^
  _<Esc>_
 ]]
@@ -35,6 +35,7 @@ M.setup = function()
          { 'c', ':GoTestFunc<CR>' },
          { 'x', ':GoTestCompile<CR>'},
          { 't', ':GoCoverage<CR>'},
+         { 'o', ':! go test ./... -coverprofile=cover.out && go tool cover -html=cover.out <CR>'},
          { '<Esc>', nil, { exit = true, nowait = true } },
       }
    }
