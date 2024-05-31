@@ -35,7 +35,7 @@ M.setup = function()
          { 'c', ':GoTestFunc<CR>' },
          { 'x', ':GoTestCompile<CR>'},
          { 't', ':GoCoverage<CR>'},
-         { 'o', ':! go test ./... -coverprofile=cover.out && go tool cover -html=cover.out <CR>'},
+         { 'o', ':! go test ./... -coverprofile=cover.out && go tool cover -html=cover.out && go tool cover -func=cover.out  <CR>'},
          { '<Esc>', nil, { exit = true, nowait = true } },
       }
    }
